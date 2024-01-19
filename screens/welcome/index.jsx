@@ -10,7 +10,7 @@ const WelcomEScreen = ({ navigation }) => {
     setShowRealApp(true);
   };
   const onSkip = () => {
-    navigation.navigate("/login");
+    navigation.navigate("/register");
   };
 
   const SkipButton = () => {
