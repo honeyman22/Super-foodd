@@ -22,7 +22,10 @@ const Register = ({ navigation }) => {
         <CustomButton name={"Create account"} />
       </View>
       <View className="mt-4">
-        <CustomButtonIcon name={"Login "} />
+        <CustomButtonIcon
+          name={"Login "}
+          func={() => navigation.navigate("/login")}
+        />
       </View>
       <Text className="text-center mt-8 leading-5">
         By
@@ -35,7 +38,7 @@ const Register = ({ navigation }) => {
         </Text>
         or{" "}
         <Text
-          onPress={() => navigation.navigate("/signup")}
+          onPress={() => navigation.navigate("/login")}
           className="font-semibold text-black"
         >
           Login

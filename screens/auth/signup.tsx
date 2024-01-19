@@ -11,7 +11,7 @@ import {
   CustomButton,
   CustomButtonIcon,
 } from "../../components/common/custom-button";
-const Login = ({ navigation }: any ) => {
+const SignUp = () => {
   const {
     register,
     handleSubmit,
@@ -48,6 +48,14 @@ const Login = ({ navigation }: any ) => {
             placeholder="Password"
           />
         </View>
+        <View className="mt-7">
+          <CustomPassword
+            control={control}
+            errors={errors}
+            id="password"
+            placeholder="Confirm Password"
+          />
+        </View>
         <Text
           onPress={() => console.log("Forget Password")}
           className="mt-5 text-base text-right pr-4"
@@ -55,7 +63,7 @@ const Login = ({ navigation }: any ) => {
           Forget password ?
         </Text>
         <View className="mt-5">
-          <CustomButton name="Login" />
+          <CustomButton name="Sign Up" />
         </View>
         <View className="w-full flex flex-row items-center justify-between my-10">
           <View className="border h-0 w-[120px]"></View>
@@ -63,24 +71,18 @@ const Login = ({ navigation }: any ) => {
           <View className="border h-0 w-[120px]"></View>
         </View>
         <View className="">
-          <CustomButtonIcon type="google" name="Login with Google" />
+          <CustomButtonIcon type="google" name="Sign Up with Google" />
         </View>
         <View className="mt-5">
-          <CustomButtonIcon type="facebook" name="Login with Facebook" />
+          <CustomButtonIcon type="facebook" name="Sign Up with Facebook" />
         </View>
         <Text className="text-center mt-7 text-sm">
           Don’t have an account?
-          <Text
-            onPress={() => navigation.navigate("/signup")}
-            className="font-semibold"
-          >
-            {" "}
-            Sign up{" "}
-          </Text>
+          <Text className="font-semibold"> Sign up </Text>
         </Text>
       </View>
     </ScrollView>
   );
 };
 
-export default Login;
+export default SignUp;
