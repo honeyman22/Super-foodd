@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expense-tracker-mobile",
-    "slug": "expense-tracker-mobile",
+    "name": "super-foodo",
+    "slug": "super-foodo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

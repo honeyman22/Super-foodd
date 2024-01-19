@@ -24,6 +24,7 @@
     "react-hook-form": "^7.49.3",
     "react-icons": "^5.0.1",
     "react-native": "0.72.6",
+    "react-native-app-intro-slider": "^4.0.4",
     "react-native-element-dropdown": "^2.10.1",
     "react-native-heroicons": "^4.0.0",
     "react-native-linear-gradient": "^2.8.3",
