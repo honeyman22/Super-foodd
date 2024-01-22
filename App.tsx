@@ -7,6 +7,7 @@ import WelcomeScreen from "./screens/welcome";
 import Login from "./screens/auth/login";
 import Register from "./screens/welcome/register";
 import SignUp from "./screens/auth/signup";
+import Home from "./screens/home";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -35,25 +36,16 @@ export default function App() {
             component={SignUp}
             options={{ title: "Sign Up", headerShown: false }}
           />
-          {/* <Stack.Screen
-          name="home"
-          component={Home}
-          options={{
-            title: "",
-            headerShown: false,
-            headerShadowVisible: false,
-            headerBackVisible: true,
-          }}
-        />
-        <Stack.Screen
-          name="expense-report"
-          component={ExpenseReport}
-          options={{
-            title: "",
-            headerShown: true,
-            headerShadowVisible: false,
-          }}
-        /> */}
+          <Stack.Screen
+            name="/home"
+            component={Home}
+            options={{
+              title: "",
+              headerShown: false,
+              headerShadowVisible: false,
+              headerBackVisible: true,
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>

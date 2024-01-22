@@ -11,7 +11,7 @@ import {
   CustomButton,
   CustomButtonIcon,
 } from "../../components/common/custom-button";
-const Login = ({ navigation }: any ) => {
+const Login = ({ navigation }: any) => {
   const {
     register,
     handleSubmit,
@@ -63,7 +63,11 @@ const Login = ({ navigation }: any ) => {
           <View className="border h-0 w-[120px]"></View>
         </View>
         <View className="">
-          <CustomButtonIcon type="google" name="Login with Google" />
+          <CustomButtonIcon
+            type="google"
+            func={() => navigation.navigate("/home")}
+            name="Login with Google"
+          />
         </View>
         <View className="mt-5">
           <CustomButtonIcon type="facebook" name="Login with Facebook" />
