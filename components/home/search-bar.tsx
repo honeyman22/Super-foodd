@@ -6,20 +6,25 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import Icon1 from "react-native-vector-icons/FontAwesome";
 import Filter from "./filter-modal";
 
-const SearchBar = () => {
+const SearchBar = ({ type, navigation }: any) => {
   const [openfilter, setOpenFilter] = useState(false);
   return (
-    <View
+    <Pressable
+      onPress={() => {
+        if (type === "search") {
+          navigation.navigate("/search");
+        }
+      }}
       style={{ backgroundColor: "rgba(229, 229, 229, 0.46)" }}
-      className="w-full h-14 flex items-center justify-between flex-row rounded-full mt-6 px-6 "
+      className="w-full h-14 flex items-center justify-between flex-row rounded-full  px-6 "
     >
       <Icon name="search" size={24} />
-      <TextInput className="w-[200px] text-base   " />
+      {type !== "search" && <TextInput className="w-[200px] text-base   " />}
       <Pressable onPress={() => setOpenFilter(true)}>
         <Icon1 name="filter" className="border-l" size={20} />
-      </Pressable> 
+      </Pressable>
       {/* <Filter open={openfilter} setOpen={setOpenFilter} /> */}
-    </View>
+    </Pressable>
   );
 };
 

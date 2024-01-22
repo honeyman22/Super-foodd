@@ -3,7 +3,7 @@ import { Image, Text, View } from "react-native";
 
 const HotSpotCard = () => {
   return (
-    <View className="w-[160px] flex items-center justify-center relative  mr-4 ">
+    <View className="w-[150px] flex items-center justify-center relative ml-1  mr-3 ">
       <Image
         source={require("../../assets/deleteable/burger.png")}
         className="w-[142px] h-[112px] z-50 rounded-lg object-contain"

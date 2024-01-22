@@ -9,7 +9,7 @@ const NavigationBar = ({ navigation, route }: any) => {
     <View className=" relative flex flex-row bg-white drop-shadow-[0px_-4px_80px_rgba(2,41,100,0.08)]   justify-between w-full h-20 items-center shadow-lg space-x-10 px-10  bottom-0">
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("home");
+          navigation.navigate("/home");
         }}
         className="flex flex-col justify-center space-y-2 items-center "
       >
@@ -21,11 +21,15 @@ const NavigationBar = ({ navigation, route }: any) => {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("home");
+          navigation.navigate("/search");
         }}
         className="flex flex-col justify-center space-y-2 items-center "
       >
-        <Icon name="search" size={20} color="#808080" />
+        <Icon
+          name="search"
+          size={20}
+          color={route?.name === "/search" ? "#FE3A82" : "gray"}
+        />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {

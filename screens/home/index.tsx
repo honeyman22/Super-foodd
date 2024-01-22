@@ -7,11 +7,13 @@ import TopMenuCard from "../../components/home/topmenu-card";
 import FeaturedCard from "../../components/home/featured-card";
 import HotSpotCard from "../../components/home/hotspot-card";
 
-const Home = () => {
+const Home = ({ navigation, route }: any) => {
   return (
-    <Container>
+    <Container navigation={navigation} route={route}>
       <TopHeader />
-      <SearchBar />
+      <View className="mt-5">
+        <SearchBar type="search" navigation={navigation} />
+      </View>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}

@@ -8,6 +8,7 @@ import Login from "./screens/auth/login";
 import Register from "./screens/welcome/register";
 import SignUp from "./screens/auth/signup";
 import Home from "./screens/home";
+import Search from "./screens/search";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -44,6 +45,15 @@ export default function App() {
               headerShown: false,
               headerShadowVisible: false,
               headerBackVisible: true,
+            }}
+          />
+          <Stack.Screen
+            name="/search"
+            component={Search}
+            options={{
+              title: "Search",
+              headerShown: true,
+              headerShadowVisible: false,
             }}
           />
         </Stack.Navigator>
