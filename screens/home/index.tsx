@@ -39,7 +39,7 @@ const Home = ({ navigation, route }: any) => {
           {Array(10)
             .fill("_")
             .map((items) => (
-              <FeaturedCard />
+              <FeaturedCard navigation={navigation} />
             ))}
         </View>
       </ScrollView>

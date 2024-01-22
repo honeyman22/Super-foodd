@@ -1,9 +1,12 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 
-const FeaturedCard = () => {
+const FeaturedCard = ({ navigation }: any) => {
   return (
-    <View className="w-[255px]   mr-4 ">
+    <Pressable
+      onPress={() => navigation.navigate("ProductDetails", { id: "5" })}
+      className="w-[255px]   mr-4 "
+    >
       <Image
         source={require("../../assets/deleteable/burgers.jpg")}
         className="w-[255px] h-[142px] rounded-lg"
@@ -12,7 +15,7 @@ const FeaturedCard = () => {
       <Text className="text-xs text-[#555]">
         $4.99 Delivery Fee . 15-30 min
       </Text>
-    </View>
+    </Pressable>
   );
 };
 

@@ -9,6 +9,7 @@ import Register from "./screens/welcome/register";
 import SignUp from "./screens/auth/signup";
 import Home from "./screens/home";
 import Search from "./screens/search";
+import ProductDetails from "./screens/products";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -55,6 +56,15 @@ export default function App() {
               headerShown: true,
               headerShadowVisible: false,
             }}
+          />
+          <Stack.Screen
+            name="ProductDetails"
+            component={ProductDetails}
+            options={({ route }: any) => ({
+              title: `Product Details - ${route.params.id}`,
+              headerShown: true,
+              headerShadowVisible: false,
+            })}
           />
         </Stack.Navigator>
       </NavigationContainer>
